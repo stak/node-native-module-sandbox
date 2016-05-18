@@ -1,5 +1,15 @@
 #include <nan.h>
 
+using v8::Local;
+using v8::Handle;
+using v8::Object;
+using v8::Number;
+using v8::String;
+using v8::FunctionTemplate;
+using Nan::GetFunction;
+using Nan::New;
+using Nan::Set;
+
 NAN_METHOD(Add) {
 	if (info.Length() < 2) {
 		Nan::ThrowTypeError("Wrong number of arguments");
@@ -12,14 +22,14 @@ NAN_METHOD(Add) {
 
 	double arg0 = info[0]->NumberValue();
 	double arg1 = info[1]->NumberValue();
-	v8::Local<v8::Number> num = Nan::New(arg0 + arg1);
+	Local<Number> num = New(arg0 + arg1);
 
 	info.GetReturnValue().Set(num);
 }
 
 NAN_MODULE_INIT(Init) {
-	Nan::Set(target, Nan::New("add").ToLocalChecked(),
-			 Nan::GetFunction(Nan::New<v8::FunctionTemplate>(Add)).ToLocalChecked());
+	Set(target, New("add").ToLocalChecked(),
+		GetFunction(New<FunctionTemplate>(Add)).ToLocalChecked());
 }
 
 NODE_MODULE(addAsync, Init)
