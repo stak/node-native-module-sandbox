@@ -1,0 +1,21 @@
+{
+  "name": "node-native-module-sandbox",
+  "version": "1.0.0",
+  "description": "- https://nodejs.org/api/addons.html - http://yosuke-furukawa.hatenablog.com/entry/2014/04/07/205935",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stak/node-native-module-sandbox.git"
+  },
+  "author": "Shutaro Takimoto",
+  "license": "MIT",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/stak/node-native-module-sandbox/issues"
+  },
+  "homepage": "https://github.com/stak/node-native-module-sandbox#readme"
+}
