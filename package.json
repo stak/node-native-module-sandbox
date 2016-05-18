@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/stak/node-native-module-sandbox/issues"
   },
-  "homepage": "https://github.com/stak/node-native-module-sandbox#readme"
+  "homepage": "https://github.com/stak/node-native-module-sandbox#readme",
+  "dependencies": {
+    "bindings": "^1.2.1"
+  }
 }

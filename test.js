@@ -1,2 +1,2 @@
-const addon = require('./build/Release/test');
+const addon = require('bindings')('test.node');
 console.log(addon.hello());
