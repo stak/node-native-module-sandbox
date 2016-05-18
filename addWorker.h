@@ -1,0 +1,8 @@
+#ifndef SANDBOX_ADD_ASYNC_WORKER_H_
+#define SANDBOX_ADD_ASYNC_WORKER_H_
+
+#include <nan.h>
+
+NAN_METHOD(AddAsync);
+
+#endif // SANDBOX_ADD_ASYNC_WORKER_H_

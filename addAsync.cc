@@ -1,4 +1,5 @@
 #include <nan.h>
+#include "addWorker.h"
 
 using v8::Local;
 using v8::Handle;
@@ -30,6 +31,8 @@ NAN_METHOD(Add) {
 NAN_MODULE_INIT(Init) {
 	Set(target, New("add").ToLocalChecked(),
 		GetFunction(New<FunctionTemplate>(Add)).ToLocalChecked());
+	Set(target, New("addAsync").ToLocalChecked(),
+		GetFunction(New<FunctionTemplate>(AddAsync)).ToLocalChecked());
 }
 
 NODE_MODULE(addAsync, Init)
