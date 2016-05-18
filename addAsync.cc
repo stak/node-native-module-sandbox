@@ -9,5 +9,5 @@ void Init(v8::Local<v8::Object> exports) {
 			     Nan::New<v8::FunctionTemplate>(Method)->GetFunction());
 }
 
-NODE_MODULE(test, Init)
+NODE_MODULE(addAsync, Init)
 

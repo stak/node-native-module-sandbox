@@ -1,8 +1,8 @@
 {
 	"targets": [
 		{
-			"target_name": "test",
-			"sources": ["test.cc"],
+			"target_name": "addAsync",
+			"sources": ["addAsync.cc"],
 			"include_dirs": ["<!(node -e \"require('nan')\")"]
 		}
 	]
