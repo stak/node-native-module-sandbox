@@ -1,2 +1,4 @@
+const assert = require('assert');
 const addon = require('bindings')('test.node');
-console.log(addon.hello());
+
+assert.equal(addon.hello(), "world");
